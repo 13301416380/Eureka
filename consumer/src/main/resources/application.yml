@@ -1,0 +1,9 @@
+server:
+  port: 7900
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 106.14.127.161:8868

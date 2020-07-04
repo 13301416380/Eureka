@@ -1,0 +1,17 @@
+server:
+  port: 7201
+spring:
+  application:
+    name: shoppingmall
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.14.127.161:8066/NJWEBDB
+    username: root
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka
+mybatis:
+  type-aliases-package: com.sunny.shopping.bo
+  mapper-locations: mapper/*.xml

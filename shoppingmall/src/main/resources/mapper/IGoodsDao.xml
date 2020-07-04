@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunny.shoppingmall.dao.IGoodsDao">
+    <select id="findAll" resultType="HashMap">
+        SELECT gt.id goodstypeid,m.manufacturer,g.goodsname,g.goodsdate,gt.goodstype,gt.price,gt.stock FROM manufacturers m
+        LEFT JOIN goods g ON g.manufacturerid=m.id
+        LEFT JOIN manufacturer_goodstype mg ON mg.seriesid =g.series
+        LEFT JOIN goodstype gt ON gt.id=mg.goodstypeid
+    </select>
+
+</mapper>

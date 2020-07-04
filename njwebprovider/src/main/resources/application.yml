@@ -1,0 +1,20 @@
+server:
+  port: 7100
+spring:
+  application:
+    name: myprovider
+  datasource:
+   url: jdbc:mysql://106.14.127.161:8066/NJWEBDB
+   driver-class-name: com.mysql.jdbc.Driver
+   username: root
+   password: 123456
+mybatis:
+  type-aliases-package: com.sunny.provider.bo
+  mapper-locations: mapper/*.xml
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:7000/eureka/
+
+#如果我们想指定让 devtools 监听指定文件夹，那么可以在 application.yml 配置
+#spring.devtools.restart.additional-paths=your path
